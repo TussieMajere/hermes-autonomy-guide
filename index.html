@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="no" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes Agent | Autonomi & Selvlæring Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            900: '#4c1d95',
+                            dark: '#0f172a',
+                            card: '#1e293b',
+                            accent: '#06b6d4',
+                            emerald: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+        mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+    <style>
+        .glow { box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.4); }
+        .glow-accent { box-shadow: 0 0 20px -5px rgba(6, 182, 212, 0.4); }
+        pre code { font-family: 'JetBrains Mono', monospace, Consolas; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center glow">
+                    <i class="fa-solid fa-brain text-white text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-cyan-400">
+                        Hermes / MajereAI
+                    </h1>
+                    <p class="text-xs text-slate-400">Autonomi, Selvlæring & Refleksbaner Guide</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span id="live-badge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-950/80 text-emerald-400 border border-emerald-800">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Bootstrap Auto-Synkronisert
+                </span>
+                <a href="https://github.com/TussieMajere/hermes-autonomy-guide" target="_blank" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 transition border border-slate-700 flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i> GitHub Repo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-6 py-8 flex-1 grid grid-cols-1 lg:grid-cols-4 gap-8">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="lg:col-span-1 space-y-2 sticky top-24 self-start">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 px-2">Hurtignavigasjon</h2>
+                <nav class="space-y-1 text-sm">
+                    <a href="#quickstart" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-brand-400 transition font-medium">
+                        <i class="fa-solid fa-bolt text-brand-400 w-4"></i> Hurtigstart & CLI
+                    </a>
+                    <a href="#visual-autonomy" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-brand-400 transition font-medium">
+                        <i class="fa-solid fa-desktop text-cyan-400 w-4"></i> Visuell GUI & X11
+                    </a>
+                    <a href="#som-closed-loop" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-brand-400 transition font-medium">
+                        <i class="fa-solid fa-crosshairs text-yellow-400 w-4"></i> Set-of-Marks (SoM) Loop
+                    </a>
+                    <a href="#takeover-safety" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-brand-400 transition font-medium">
+                        <i class="fa-solid fa-shield-halved text-rose-400 w-4"></i> Takeover & Sikkerhet
+                    </a>
+                    <a href="#self-learning-recipes" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-brand-400 transition font-medium">
+                        <i class="fa-solid fa-video text-purple-400 w-4"></i> Selvlæring & Recipes
+                    </a>
+                    <a href="#dual-track-router" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-brand-400 transition font-medium">
+                        <i class="fa-solid fa-route text-blue-400 w-4"></i> Dual-Track Router
+                    </a>
+                    <a href="#memory-system" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-brand-400 transition font-medium">
+                        <i class="fa-solid fa-book-bookmark text-emerald-400 w-4"></i> Bibliotek & Kartotek
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Hardware & System Specs -->
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4 text-xs space-y-2 text-slate-400">
+                <div class="font-semibold text-slate-300 flex items-center justify-between">
+                    <span>Målmaskinvare</span>
+                    <i class="fa-solid fa-microchip text-brand-400"></i>
+                </div>
+                <div class="space-y-1">
+                    <p><strong class="text-slate-300">OS:</strong> Linux Mint 22.3 (MATE/X11)</p>
+                    <p><strong class="text-slate-300">GPU:</strong> Nvidia RTX 5060 Ti 16GB</p>
+                    <p><strong class="text-slate-300">Driver:</strong> CUA-Driver v0.23.2+</p>
+                    <p><strong class="text-slate-300">Modeller:</strong> Gemini 3.1 Flash / 2.5 Pro</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="lg:col-span-3 space-y-10">
+
+            <!-- Hero Section -->
+            <div class="bg-gradient-to-r from-brand-900/30 via-slate-900 to-slate-900 border border-brand-500/30 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+                <div class="relative z-10 max-w-2xl">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/20 text-brand-300 border border-brand-500/30 mb-4 inline-block">
+                        Agentisk Autonomi 2026
+                    </span>
+                    <h2 class="text-3xl font-extrabold tracking-tight text-white mb-3">
+                        Hermes Autonomi & Selvlærende Refleksbaner
+                    </h2>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Dette er den operative manualen for hvordan du utnytter Hermes Agentens visuelle skrivebordskontroll, Set-of-Marks resonneringsloop, automatiske BankID/2FA-takeovers, og Gemini-drevne videoopptak som konverterer menneskelige demonstrasjoner til permanente oppskrifter (recipes).
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#quickstart" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold transition flex items-center gap-2 glow">
+                            <i class="fa-solid fa-play"></i> Start her
+                        </a>
+                        <a href="#self-learning-recipes" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-semibold transition border border-slate-700 flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap"></i> Selvlæring
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arkitekturdiagram (Mermaid) -->
+            <section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-network-wired text-brand-400"></i> Hermes Kognitive Refleksbane
+                </h3>
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/80 overflow-x-auto text-xs">
+                    <pre class="mermaid text-center">
+flowchart TD
+    UserRequest[Brukerforespørsel] --> FastPath{1. Refleksbane:\nFinnes oppskrift i recipes/?}
+    FastPath -->|JA| ExecRecipe[Kjør oppskrift direkte\nPlaywright / X11\n0ms LLM forsinkelse]
+    FastPath -->|NEI| SlowPath[2. Autonom Slow-Path:\nSoM Closed-Loop]
+    
+    SlowPath --> Cap[Capture\nscrot / mode=som]
+    Cap --> Ana[Analyze\nSoM Noder & Markører]
+    Ana --> Act[Act\nFokus-protokoll & Input]
+    Act --> Ver[Verify\nVisuell differanse]
+    
+    Ver -->|Sensitiv/Blokkert\nBankID/2FA/Sudo| Takeover[3. Takeover & Selvlæring]
+    Takeover --> Rec[ffmpeg X11-opptak]
+    Rec --> OpenCV[OpenCV Keyframes]
+    OpenCV --> Gemini[Gemini Vision Syntese]
+    Gemini --> SaveRecipe[Lagre ny oppskrift i recipes/]
+    SaveRecipe --> FastPath
+                    </pre>
+                </div>
+            </section>
+
+            <!-- 1. HURTIGSTART & CLI -->
+            <section id="quickstart" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-bolt text-brand-400"></i> 1. Hurtigstart & Kjøring
+                    </h3>
+                    <span class="text-xs text-slate-400">Praktisk bruk</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Kommando 1: REPL -->
+                    <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Interaktiv REPL</span>
+                            <button onclick="copyCode('cmd-repl')" class="text-xs text-slate-400 hover:text-white transition"><i class="fa-regular fa-copy"></i></button>
+                        </div>
+                        <pre class="bg-slate-900 p-2.5 rounded-lg text-xs overflow-x-auto text-brand-300" id="cmd-repl"><code>cd ~/hermes-agent
+~/pytorch-env/bin/python -m core.agent</code></pre>
+                        <p class="text-xs text-slate-400">Starter den interaktive agentkonsollen for direkte GUI-kommandoer.</p>
+                    </div>
+
+                    <!-- Kommando 2: SoM Test -->
+                    <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider">Visuell Closed-Loop Test</span>
+                            <button onclick="copyCode('cmd-som')" class="text-xs text-slate-400 hover:text-white transition"><i class="fa-regular fa-copy"></i></button>
+                        </div>
+                        <pre class="bg-slate-900 p-2.5 rounded-lg text-xs overflow-x-auto text-brand-300" id="cmd-som"><code>~/pytorch-env/bin/python ~/hermes-agent/test_visual_loop.py</code></pre>
+                        <p class="text-xs text-slate-400">Kjører full SoM-skanning og verifikasjon av aktive skrivebordsvinduer.</p>
+                    </div>
+
+                    <!-- Kommando 3: Oppskrift avspilling -->
+                    <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-bold text-purple-400 uppercase tracking-wider">Spill av Oppskrift</span>
+                            <button onclick="copyCode('cmd-recipe')" class="text-xs text-slate-400 hover:text-white transition"><i class="fa-regular fa-copy"></i></button>
+                        </div>
+                        <pre class="bg-slate-900 p-2.5 rounded-lg text-xs overflow-x-auto text-brand-300" id="cmd-recipe"><code>~/pytorch-env/bin/python -c "
+from recipe_recorder import RecipeRecorder
+RecipeRecorder().play_recipe('467ac5307553', speed=1.2)
+"</code></pre>
+                        <p class="text-xs text-slate-400">Kjører en ferdig innspilt handling i høyt tempo uten LLM-forsinkelse.</p>
+                    </div>
+
+                    <!-- Kommando 4: Minnesøk -->
+                    <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Kartotek & Minnesøk</span>
+                            <button onclick="copyCode('cmd-mem')" class="text-xs text-slate-400 hover:text-white transition"><i class="fa-regular fa-copy"></i></button>
+                        </div>
+                        <pre class="bg-slate-900 p-2.5 rounded-lg text-xs overflow-x-auto text-brand-300" id="cmd-mem"><code>hermes-memory kartotek
+hermes-memory search "oppskrifter og autonomi"</code></pre>
+                        <p class="text-xs text-slate-400">Slår opp i kortkatalogen (<10k tegn) eller kjører hybridsøk.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. VISUELL GUI & COMPUTER USE -->
+            <section id="visual-autonomy" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-desktop text-cyan-400"></i> 2. Visuell Autonomi & X11 Desktop Kontroll
+                    </h3>
+                    <span class="text-xs text-slate-400">~/.hermes/skills/computer-use-visual</span>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-300">
+                    <p>
+                        Hermes benytter en <strong>deterministisk 5-stegs fokusprotokoll</strong> for Linux Mint (X11) for å forhindre feiltrykk på MATE-paneler (Z-index 5) og Vulkan/SIGTRAP-krasj på RTX 5060 Ti.
+                    </p>
+
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-3">
+                        <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider">Deterministisk Flyt i X11:</h4>
+                        <ol class="list-decimal list-inside space-y-1 text-xs text-slate-400">
+                            <li><strong class="text-slate-200">Raise & Focus:</strong> Kaller <code>wmctrl -ia &lt;win_id&gt;</code> eller <code>focus_window("Chromium")</code> for å heve vinduet.</li>
+                            <li><strong class="text-slate-200">Visuell Stabilisering:</strong> Venter 300ms på rendering.</li>
+                            <li><strong class="text-slate-200">Set-of-Marks Opptak:</strong> Fanger koordinater via <code>mode="som"</code>.</li>
+                            <li><strong class="text-slate-200">Målrettet Klikk:</strong> Kaller <code>xdotool mousemove X Y click 1</code> på bekreftet element.</li>
+                            <li><strong class="text-slate-200">Verifikasjon:</strong> Tar <code>capture_after</code> og sjekker visuell differanse.</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                        <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">Python Eksempel:</h4>
+                        <pre class="bg-slate-900 p-3 rounded-lg text-xs overflow-x-auto text-cyan-300"><code>from x11_desktop_ctl import X11DesktopController
+
+ctl = X11DesktopController()
+# 1. Finn og fokuser Firefox
+ctl.focus_window("Firefox")
+# 2. Klikk på definert knapp
+ctl.click_mouse(850, 420)
+# 3. Skriv tekst med 10ms forsinkelse
+ctl.type_text("https://aistudio.google.com\n")
+# 4. Ta verifikasjonsskjermbilde
+shot_path = ctl.take_screenshot()
+print(f"Skjermbilde lagret i: {shot_path}")</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. SET-OF-MARKS & CLOSED-LOOP -->
+            <section id="som-closed-loop" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-crosshairs text-yellow-400"></i> 3. Set-of-Marks (SoM) Closed-Loop
+                    </h3>
+                    <span class="text-xs text-slate-400">som_closed_loop.py</span>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-300">
+                    <p>
+                        Set-of-Marks eliminerer gjetting av pikselkoordinater ved å generere <strong>visuelle nummererte ID-noder</strong> over alle interaktive elementer i brukergrensesnittet.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="font-bold text-yellow-400">1. SoMAnalyzer</span>
+                            <p class="text-slate-400 mt-1">Scanner AX-tre og vindusstrukturer, genererer nummererte overlays med bounding boxes.</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="font-bold text-yellow-400">2. VerificationEngine</span>
+                            <p class="text-slate-400 mt-1">Sammenligner før- og etterbilde for å bekrefte at handlingen faktisk førte til ønsket endring.</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="font-bold text-yellow-400">3. Eskaleringsstige</span>
+                            <p class="text-slate-400 mt-1">Element (bakgrunn) → Fresh capture → Pixel fallback → Foreground re-execution.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. TAKEOVER & SIKKERHET -->
+            <section id="takeover-safety" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-shield-halved text-rose-400"></i> 4. Sensitiv Deteksjon & Takeover
+                    </h3>
+                    <span class="text-xs text-slate-400">takeover_handler.py</span>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-300">
+                    <p>
+                        Agenten overvåker skrivebordet kontinuerlig. Ved treff på sensitive mønstre (f.eks. BankID, 2FA, passord, betaling, root/sudo) <strong>pauser autonomien umiddelbart</strong>, og starter et tapsfritt skjermopptak med FFmpeg for å lære av brukerens manuelle fullføring.
+                    </p>
+
+                    <div class="bg-rose-950/20 border border-rose-900/50 p-4 rounded-xl space-y-2">
+                        <span class="text-xs font-bold text-rose-400 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Automatisk Detekterte Sensitive Mønstre:
+                        </span>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-300">
+                            <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">🏦 BankID / Buypass</span>
+                            <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">🔑 2FA / Authenticator</span>
+                            <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">💳 Betaling / Stripe</span>
+                            <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">🔐 Bitwarden / KeePass</span>
+                            <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">💻 Sudo / Root Terminal</span>
+                            <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">🛡️ GPG / VeraCrypt</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. SELVLÆRING & RECIPE RECORDER -->
+            <section id="self-learning-recipes" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-video text-purple-400"></i> 5. Selvlæring & Recipe Recorder
+                    </h3>
+                    <span class="text-xs text-slate-400">recipe_recorder.py & learning/</span>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-300">
+                    <p>
+                        Dette er kjernen i hvordan Hermes <strong>lærer fra menneskelig demonstrasjon</strong> og skaper nye hurtig-reflekser:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-xs">
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="font-bold text-purple-400">1. Videoopptak</span>
+                            <p class="text-slate-400 mt-1">Under takeover tas det opp video med 15 FPS H.264 ultrafast.</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="font-bold text-purple-400">2. Keyframe Analyse</span>
+                            <p class="text-slate-400 mt-1">OpenCV trekker ut inntil 10 nøkkelbilder fra videoen.</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="font-bold text-purple-400">3. Gemini Vision</span>
+                            <p class="text-slate-400 mt-1">Gemini analyserer bildene og oversetter dem til JSON-steg.</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="font-bold text-purple-400">4. Fast-Path Refleks</span>
+                            <p class="text-slate-400 mt-1">Neste gang kjøres oppskriften deterministisk på 0 millisekunder.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                        <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">Oppskriftsformat (JSON):</h4>
+                        <pre class="bg-slate-900 p-3 rounded-lg text-xs overflow-x-auto text-purple-300"><code>{
+  "recipe_id": "467ac5307553",
+  "name": "BankID Login Sequence",
+  "steps": [
+    { "step_number": 1, "action_type": "mouse_move", "parameters": {"target_x": 100, "target_y": 100} },
+    { "step_number": 2, "action_type": "type_text", "parameters": {"text": "{{USERNAME}}"} }
+  ],
+  "checksum": "869e609c8141665d"
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. DUAL-TRACK ROUTER -->
+            <section id="dual-track-router" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-route text-blue-400"></i> 6. Dual-Track Router
+                    </h3>
+                    <span class="text-xs text-slate-400">dual_track_router.py</span>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-300">
+                    <p>
+                        Ruter handlinger intelligent basert på sanntids konfidensmålinger:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="font-bold text-blue-400">Track A: DOM (Nettleser)</span>
+                            <p class="text-slate-400 mt-1">Playwright & AX-tre. Høy presisjon for nettsider.</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="font-bold text-blue-400">Track B: Physical OS</span>
+                            <p class="text-slate-400 mt-1">X11 Desktop Controller & koordinater for skrivebordsapper.</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="font-bold text-blue-400">Track C: Hybrid</span>
+                            <p class="text-slate-400 mt-1">Fusjonerer visuelle markører og DOM-noder ved lav konfidens.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. BIBLIOTEK & KARTOTEK -->
+            <section id="memory-system" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-book-bookmark text-emerald-400"></i> 7. Bibliotek- og Kartotekmodellen
+                    </h3>
+                    <span class="text-xs text-slate-400">hermes-memory</span>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-300">
+                    <p>
+                        Hermes holder arbeidsminnet slankt (&lt; 10 000 tegn) ved å opprettholde et <strong>kortkartotek</strong> i <code>MEMORY.md</code>, mens fulle dags- og ukesbøker lagres på disk og indekseres asynkront i ChromaDB og SQLite (FTS5).
+                    </p>
+
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="font-bold text-emerald-400">KARTOTEKKORT FORMAT:</span>
+                            <span class="text-slate-400">Under 10 000 tegn totalt</span>
+                        </div>
+                        <pre class="bg-slate-900 p-2.5 rounded-lg text-xs overflow-x-auto text-emerald-300"><code>- [BOK: week_36_2026.md]
+  • Filsti på disk: /home/tussie/hermes-memory/books/week_36_2026.md
+  • Baksidetekst: Oppsett av RTX 5060 Ti, Vertex AI, og implementering av fotografisk minnesystem.
+  • Handling: Les filen fra disk for detaljert ukeshistorikk.</code></pre>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-6 text-center text-xs text-slate-400">
+        <p>Hermes / MajereAI Autonomi & Selvlæring Guide • Utviklet for Tussie • Synkroniseres automatisk ved AGY Bootstrap</p>
+    </footer>
+
+    <script>
+        function copyCode(id) {
+            const el = document.getElementById(id);
+            navigator.clipboard.writeText(el.innerText);
+            alert('Kommando kopiert til utklippstavlen!');
+        }
+    </script>
+</body>
+</html>
