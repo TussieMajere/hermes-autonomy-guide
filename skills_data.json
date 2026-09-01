@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-01 16:12:49",
-  "skills_count": 61,
+  "last_updated": "2026-09-01 16:26:28",
+  "skills_count": 62,
   "recipes_count": 2,
   "skills": [
     {
@@ -182,6 +182,11 @@
       "path": ".hermes/skills/apple/imessage/SKILL.md",
       "category": "imessage",
       "updated_at": "2026-09-01T00:26:57.463645"
+    },
+    {
+      "path": ".hermes/skills/agy-pilot/SKILL.md",
+      "category": "agy-pilot",
+      "updated_at": "2026-09-01T16:25:25.916171"
     },
     {
       "path": ".hermes/skills/research/arxiv/SKILL.md",
