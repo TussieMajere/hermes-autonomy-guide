@@ -1,0 +1,336 @@
+{
+  "last_updated": "2026-09-01 16:12:49",
+  "skills_count": 61,
+  "recipes_count": 2,
+  "skills": [
+    {
+      "path": ".hermes/skills/software-development/python-debugpy/SKILL.md",
+      "category": "python-debugpy",
+      "updated_at": "2026-09-01T00:26:57.473359"
+    },
+    {
+      "path": ".hermes/skills/software-development/inspecting-hermes-desktop-dom/SKILL.md",
+      "category": "inspecting-hermes-desktop-dom",
+      "updated_at": "2026-09-01T00:26:57.473359"
+    },
+    {
+      "path": ".hermes/skills/software-development/simplify-code/SKILL.md",
+      "category": "simplify-code",
+      "updated_at": "2026-09-01T00:26:57.473359"
+    },
+    {
+      "path": ".hermes/skills/software-development/systematic-debugging/SKILL.md",
+      "category": "systematic-debugging",
+      "updated_at": "2026-09-01T00:26:57.473359"
+    },
+    {
+      "path": ".hermes/skills/software-development/hermes-agent-skill-authoring/SKILL.md",
+      "category": "hermes-agent-skill-authoring",
+      "updated_at": "2026-09-01T00:26:57.473359"
+    },
+    {
+      "path": ".hermes/skills/software-development/spike/SKILL.md",
+      "category": "spike",
+      "updated_at": "2026-09-01T00:26:57.473359"
+    },
+    {
+      "path": ".hermes/skills/software-development/test-driven-development/SKILL.md",
+      "category": "test-driven-development",
+      "updated_at": "2026-09-01T00:26:57.473359"
+    },
+    {
+      "path": ".hermes/skills/software-development/requesting-code-review/SKILL.md",
+      "category": "requesting-code-review",
+      "updated_at": "2026-09-01T00:26:57.473359"
+    },
+    {
+      "path": ".hermes/skills/software-development/codebase-inspection/SKILL.md",
+      "category": "codebase-inspection",
+      "updated_at": "2026-09-01T00:26:57.472931"
+    },
+    {
+      "path": ".hermes/skills/software-development/github/SKILL.md",
+      "category": "github",
+      "updated_at": "2026-09-01T00:26:57.472988"
+    },
+    {
+      "path": ".hermes/skills/software-development/node-inspect-debugger/SKILL.md",
+      "category": "node-inspect-debugger",
+      "updated_at": "2026-09-01T00:26:57.473359"
+    },
+    {
+      "path": ".hermes/skills/software-development/dogfood/SKILL.md",
+      "category": "dogfood",
+      "updated_at": "2026-09-01T00:26:57.472931"
+    },
+    {
+      "path": ".hermes/skills/autonomous-ai-agents/codex/SKILL.md",
+      "category": "codex",
+      "updated_at": "2026-09-01T00:26:57.463741"
+    },
+    {
+      "path": ".hermes/skills/autonomous-ai-agents/hermes-agent/SKILL.md",
+      "category": "hermes-agent",
+      "updated_at": "2026-09-01T00:26:57.463741"
+    },
+    {
+      "path": ".hermes/skills/autonomous-ai-agents/claude-code/SKILL.md",
+      "category": "claude-code",
+      "updated_at": "2026-09-01T00:26:57.463741"
+    },
+    {
+      "path": ".hermes/skills/autonomous-ai-agents/computer-use/SKILL.md",
+      "category": "computer-use",
+      "updated_at": "2026-09-01T10:50:04.821942"
+    },
+    {
+      "path": ".hermes/skills/autonomous-ai-agents/opencode/SKILL.md",
+      "category": "opencode",
+      "updated_at": "2026-09-01T00:26:57.464398"
+    },
+    {
+      "path": ".hermes/skills/productivity/document-to-action-items/SKILL.md",
+      "category": "document-to-action-items",
+      "updated_at": "2026-09-01T00:26:57.470533"
+    },
+    {
+      "path": ".hermes/skills/productivity/notion/SKILL.md",
+      "category": "notion",
+      "updated_at": "2026-09-01T00:26:57.471311"
+    },
+    {
+      "path": ".hermes/skills/productivity/box/SKILL.md",
+      "category": "box",
+      "updated_at": "2026-09-01T00:26:57.470433"
+    },
+    {
+      "path": ".hermes/skills/productivity/pdf/SKILL.md",
+      "category": "pdf",
+      "updated_at": "2026-09-01T00:26:57.471511"
+    },
+    {
+      "path": ".hermes/skills/productivity/teams-meeting-pipeline/SKILL.md",
+      "category": "teams-meeting-pipeline",
+      "updated_at": "2026-09-01T00:26:57.471996"
+    },
+    {
+      "path": ".hermes/skills/productivity/google-workspace/SKILL.md",
+      "category": "google-workspace",
+      "updated_at": "2026-09-01T00:26:57.470854"
+    },
+    {
+      "path": ".hermes/skills/productivity/weekly-review-planning/SKILL.md",
+      "category": "weekly-review-planning",
+      "updated_at": "2026-09-01T00:26:57.471996"
+    },
+    {
+      "path": ".hermes/skills/productivity/meeting-action-items/SKILL.md",
+      "category": "meeting-action-items",
+      "updated_at": "2026-09-01T00:26:57.471311"
+    },
+    {
+      "path": ".hermes/skills/productivity/maps/SKILL.md",
+      "category": "maps",
+      "updated_at": "2026-09-01T00:26:57.471139"
+    },
+    {
+      "path": ".hermes/skills/productivity/docx/SKILL.md",
+      "category": "docx",
+      "updated_at": "2026-09-01T00:26:57.470760"
+    },
+    {
+      "path": ".hermes/skills/productivity/product-price-monitor/SKILL.md",
+      "category": "product-price-monitor",
+      "updated_at": "2026-09-01T00:26:57.471996"
+    },
+    {
+      "path": ".hermes/skills/productivity/powerpoint/SKILL.md",
+      "category": "powerpoint",
+      "updated_at": "2026-09-01T00:26:57.471927"
+    },
+    {
+      "path": ".hermes/skills/productivity/airtable/SKILL.md",
+      "category": "airtable",
+      "updated_at": "2026-09-01T00:26:57.470433"
+    },
+    {
+      "path": ".hermes/skills/productivity/xlsx/SKILL.md",
+      "category": "xlsx",
+      "updated_at": "2026-09-01T00:26:57.472237"
+    },
+    {
+      "path": ".hermes/skills/devops/sdlc-review/SKILL.md",
+      "category": "sdlc-review",
+      "updated_at": "2026-09-01T00:26:57.469686"
+    },
+    {
+      "path": ".hermes/skills/apple/apple-notes/SKILL.md",
+      "category": "apple-notes",
+      "updated_at": "2026-09-01T00:26:57.463645"
+    },
+    {
+      "path": ".hermes/skills/apple/apple-reminders/SKILL.md",
+      "category": "apple-reminders",
+      "updated_at": "2026-09-01T00:26:57.463645"
+    },
+    {
+      "path": ".hermes/skills/apple/findmy/SKILL.md",
+      "category": "findmy",
+      "updated_at": "2026-09-01T00:26:57.463645"
+    },
+    {
+      "path": ".hermes/skills/apple/imessage/SKILL.md",
+      "category": "imessage",
+      "updated_at": "2026-09-01T00:26:57.463645"
+    },
+    {
+      "path": ".hermes/skills/research/arxiv/SKILL.md",
+      "category": "arxiv",
+      "updated_at": "2026-09-01T00:26:57.472554"
+    },
+    {
+      "path": ".hermes/skills/research/grounded-citations/SKILL.md",
+      "category": "grounded-citations",
+      "updated_at": "2026-09-01T00:26:57.472589"
+    },
+    {
+      "path": ".hermes/skills/research/competitor-news-monitor/SKILL.md",
+      "category": "competitor-news-monitor",
+      "updated_at": "2026-09-01T00:26:57.472589"
+    },
+    {
+      "path": ".hermes/skills/research/llm-wiki/SKILL.md",
+      "category": "llm-wiki",
+      "updated_at": "2026-09-01T00:26:57.472730"
+    },
+    {
+      "path": ".hermes/skills/creative/architecture-diagram/SKILL.md",
+      "category": "architecture-diagram",
+      "updated_at": "2026-09-01T00:26:57.464468"
+    },
+    {
+      "path": ".hermes/skills/creative/manim-video/SKILL.md",
+      "category": "manim-video",
+      "updated_at": "2026-09-01T00:26:57.466161"
+    },
+    {
+      "path": ".hermes/skills/creative/humanizer/SKILL.md",
+      "category": "humanizer",
+      "updated_at": "2026-09-01T00:26:57.466053"
+    },
+    {
+      "path": ".hermes/skills/creative/claude-design/SKILL.md",
+      "category": "claude-design",
+      "updated_at": "2026-09-01T00:26:57.465717"
+    },
+    {
+      "path": ".hermes/skills/creative/design-md/SKILL.md",
+      "category": "design-md",
+      "updated_at": "2026-09-01T00:26:57.465717"
+    },
+    {
+      "path": ".hermes/skills/creative/baoyu-infographic/SKILL.md",
+      "category": "baoyu-infographic",
+      "updated_at": "2026-09-01T00:26:57.465397"
+    },
+    {
+      "path": ".hermes/skills/creative/songwriting-and-ai-music/SKILL.md",
+      "category": "songwriting-and-ai-music",
+      "updated_at": "2026-09-01T00:26:57.468576"
+    },
+    {
+      "path": ".hermes/skills/creative/ascii-video/SKILL.md",
+      "category": "ascii-video",
+      "updated_at": "2026-09-01T00:26:57.464590"
+    },
+    {
+      "path": ".hermes/skills/creative/popular-web-designs/SKILL.md",
+      "category": "popular-web-designs",
+      "updated_at": "2026-09-01T00:26:57.467025"
+    },
+    {
+      "path": ".hermes/skills/creative/p5js/SKILL.md",
+      "category": "p5js",
+      "updated_at": "2026-09-01T00:26:57.466569"
+    },
+    {
+      "path": ".hermes/skills/computer-use-visual/SKILL.md",
+      "category": "computer-use-visual",
+      "updated_at": "2026-09-01T10:49:32.567854"
+    },
+    {
+      "path": ".hermes/skills/social-media/xurl/SKILL.md",
+      "category": "xurl",
+      "updated_at": "2026-09-01T00:26:57.472873"
+    },
+    {
+      "path": ".hermes/skills/email/email-inbox-triage/SKILL.md",
+      "category": "email-inbox-triage",
+      "updated_at": "2026-09-01T00:26:57.469735"
+    },
+    {
+      "path": ".hermes/skills/email/himalaya/SKILL.md",
+      "category": "himalaya",
+      "updated_at": "2026-09-01T00:26:57.469735"
+    },
+    {
+      "path": ".hermes/skills/note-taking/obsidian/SKILL.md",
+      "category": "obsidian",
+      "updated_at": "2026-09-01T00:26:57.470402"
+    },
+    {
+      "path": ".hermes/skills/media/telegram-delivery/SKILL.md",
+      "category": "telegram-delivery",
+      "updated_at": "2026-09-01T02:12:52.181767"
+    },
+    {
+      "path": ".hermes/skills/media/youtube-content/SKILL.md",
+      "category": "youtube-content",
+      "updated_at": "2026-09-01T00:26:57.470291"
+    },
+    {
+      "path": ".hermes/skills/media/songsee/SKILL.md",
+      "category": "songsee",
+      "updated_at": "2026-09-01T00:26:57.470291"
+    },
+    {
+      "path": ".hermes/skills/media/gif-search/SKILL.md",
+      "category": "gif-search",
+      "updated_at": "2026-09-01T00:26:57.470291"
+    },
+    {
+      "path": ".hermes/skills/web/blocked-page-recovery/SKILL.md",
+      "category": "blocked-page-recovery",
+      "updated_at": "2026-09-01T00:26:57.473782"
+    },
+    {
+      "path": ".hermes/skills/verify-stack/SKILL.md",
+      "category": "verify-stack",
+      "updated_at": "2026-09-01T06:03:30.873680"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "467ac5307553",
+      "name": "Test Login Sequence",
+      "description": "Test recipe for login automation during takeover",
+      "steps": 5,
+      "tags": [
+        "test",
+        "login",
+        "takeover"
+      ]
+    },
+    {
+      "id": "ea4868c06754",
+      "name": "Test Login Sequence",
+      "description": "Test recipe for login automation during takeover",
+      "steps": 5,
+      "tags": [
+        "test",
+        "login",
+        "takeover"
+      ]
+    }
+  ]
+}
