@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-01 16:26:28",
-  "skills_count": 62,
+  "last_updated": "2026-09-01 17:39:14",
+  "skills_count": 58,
   "recipes_count": 2,
   "skills": [
     {
@@ -162,26 +162,6 @@
       "path": ".hermes/skills/devops/sdlc-review/SKILL.md",
       "category": "sdlc-review",
       "updated_at": "2026-09-01T00:26:57.469686"
-    },
-    {
-      "path": ".hermes/skills/apple/apple-notes/SKILL.md",
-      "category": "apple-notes",
-      "updated_at": "2026-09-01T00:26:57.463645"
-    },
-    {
-      "path": ".hermes/skills/apple/apple-reminders/SKILL.md",
-      "category": "apple-reminders",
-      "updated_at": "2026-09-01T00:26:57.463645"
-    },
-    {
-      "path": ".hermes/skills/apple/findmy/SKILL.md",
-      "category": "findmy",
-      "updated_at": "2026-09-01T00:26:57.463645"
-    },
-    {
-      "path": ".hermes/skills/apple/imessage/SKILL.md",
-      "category": "imessage",
-      "updated_at": "2026-09-01T00:26:57.463645"
     },
     {
       "path": ".hermes/skills/agy-pilot/SKILL.md",
