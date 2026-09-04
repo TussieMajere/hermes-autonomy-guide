@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-01 21:26:58",
-  "skills_count": 58,
+  "last_updated": "2026-09-04 22:02:52",
+  "skills_count": 59,
   "recipes_count": 2,
   "skills": [
     {
@@ -262,6 +262,11 @@
       "path": ".hermes/skills/note-taking/obsidian/SKILL.md",
       "category": "obsidian",
       "updated_at": "2026-09-01T00:26:57.470402"
+    },
+    {
+      "path": ".hermes/skills/hermes-memory/SKILL.md",
+      "category": "hermes-memory",
+      "updated_at": "2026-09-04T18:25:16.063695"
     },
     {
       "path": ".hermes/skills/media/telegram-delivery/SKILL.md",
