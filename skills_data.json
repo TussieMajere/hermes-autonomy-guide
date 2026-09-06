@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-06 15:59:37",
-  "skills_count": 61,
+  "last_updated": "2026-09-06 21:50:39",
+  "skills_count": 63,
   "recipes_count": 2,
   "skills": [
     {
@@ -176,17 +176,22 @@
     {
       "path": ".hermes/skills/research/grounded-citations/SKILL.md",
       "category": "grounded-citations",
-      "updated_at": "2026-09-01T00:26:57.472589"
+      "updated_at": "2026-09-06T19:19:46.159106"
     },
     {
       "path": ".hermes/skills/research/competitor-news-monitor/SKILL.md",
       "category": "competitor-news-monitor",
-      "updated_at": "2026-09-01T00:26:57.472589"
+      "updated_at": "2026-09-06T19:19:46.159106"
     },
     {
       "path": ".hermes/skills/research/llm-wiki/SKILL.md",
       "category": "llm-wiki",
       "updated_at": "2026-09-01T00:26:57.472730"
+    },
+    {
+      "path": ".hermes/skills/research/rss-feeds/SKILL.md",
+      "category": "rss-feeds",
+      "updated_at": "2026-09-06T19:19:46.160105"
     },
     {
       "path": ".hermes/skills/creative/architecture-diagram/SKILL.md",
@@ -247,6 +252,11 @@
       "path": ".hermes/skills/social-media/xurl/SKILL.md",
       "category": "xurl",
       "updated_at": "2026-09-01T00:26:57.472873"
+    },
+    {
+      "path": ".hermes/skills/social-media/reddit-reading/SKILL.md",
+      "category": "reddit-reading",
+      "updated_at": "2026-09-06T19:19:46.160105"
     },
     {
       "path": ".hermes/skills/task-cli/SKILL.md",
