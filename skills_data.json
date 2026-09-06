@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-06 11:24:33",
-  "skills_count": 59,
+  "last_updated": "2026-09-06 15:59:37",
+  "skills_count": 61,
   "recipes_count": 2,
   "skills": [
     {
@@ -247,6 +247,16 @@
       "path": ".hermes/skills/social-media/xurl/SKILL.md",
       "category": "xurl",
       "updated_at": "2026-09-01T00:26:57.472873"
+    },
+    {
+      "path": ".hermes/skills/task-cli/SKILL.md",
+      "category": "task-cli",
+      "updated_at": "2026-09-06T13:54:46.100590"
+    },
+    {
+      "path": ".hermes/skills/dashboard-cli/SKILL.md",
+      "category": "dashboard-cli",
+      "updated_at": "2026-09-06T13:40:05.523712"
     },
     {
       "path": ".hermes/skills/email/email-inbox-triage/SKILL.md",
