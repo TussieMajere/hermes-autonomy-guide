@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-06 23:52:00",
-  "skills_count": 63,
+  "last_updated": "2026-09-07 03:10:20",
+  "skills_count": 64,
   "recipes_count": 2,
   "skills": [
     {
@@ -162,6 +162,11 @@
       "path": ".hermes/skills/devops/sdlc-review/SKILL.md",
       "category": "sdlc-review",
       "updated_at": "2026-09-01T00:26:57.469686"
+    },
+    {
+      "path": ".hermes/skills/venice-media/SKILL.md",
+      "category": "venice-media",
+      "updated_at": "2026-09-07T00:11:47.044288"
     },
     {
       "path": ".hermes/skills/agy-pilot/SKILL.md",
